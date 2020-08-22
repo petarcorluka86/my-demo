@@ -45,12 +45,23 @@ class IconsMode extends Component {
             )
         return(
             <div>
-                <div>
-                    <span className="title">These are the 10 most popular songs on Deezer:</span>
+                <div className="title-and-sort">
+                    <div className="title">These are the 10 most popular songs on Deezer:</div>
+                    <div className="sort">
+                        <label className="select-form">
+                            Sort by duration:
+                            <select className="form-control select" onChange={this.props.handleSort}>
+                                <option className="select" value="-">-</option>
+                                <option className="select" value="asc">ASC</option>
+                                <option className="select" value="desc">DESC</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
-                <span>Sortafsddddd</span>
-                <div className="icons-container">{songs}</div>
-                {this.state.showInfo && <SongInfo song={this.state.song} />}
+                <div>
+                    <div className="icons-container">{songs}</div>
+                    {this.state.showInfo && <SongInfo song={this.state.song} />}
+                </div>
             </div>
         )
     }

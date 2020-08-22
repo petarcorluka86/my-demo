@@ -19,9 +19,9 @@ export default class ApiService {
 
     /*This function should be used ONLY for testing other functionalities in this in this application, it should be
     commented otherwise. It has same effect like PROPER FUNCTION ABOVE, but this one's data is hard coded for testing purposes.*/
-    /*
-    getSongs = async() => {
+    
+    /*getSongs = async() => {
         return songData.tracks.data
-    };
-    */
+    };*/
+    
 }
