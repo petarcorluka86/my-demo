@@ -1,0 +1,18 @@
+.content{
+    margin-top: 30pt;
+    height: 100vw;
+    width: 100%;
+    display: flex;
+}
+
+.left-content-container{
+    width: 60%;
+    background: white;
+    margin: 5pt 0 0 0 ;
+}
+
+.right-content-container{
+    width: 40%;
+    background: white;
+    margin: 5pt 0 0 5pt ;
+}
