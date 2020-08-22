@@ -16,3 +16,10 @@
     border: 1px solid white;
     margin: 5pt 0 0 5pt ;
 }
+
+.sort-list{
+    display: flex;
+    float: left;
+    height: 2.2em;
+    align-items: center;
+}
