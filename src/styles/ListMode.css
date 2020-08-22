@@ -17,9 +17,49 @@
     margin: 5pt 0 0 5pt ;
 }
 
-.sort-list{
+.title-list {
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.sort-list {
     display: flex;
     float: left;
     height: 2.2em;
     align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    align-content: center;
+    text-align: center;
+}
+
+.song-list-item {
+    width: 80%;
+    height: 30pt;
+    margin: 5pt 5pt 5pt -20pt;
+    text-align: center;
+    float: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.song-list-item:hover {
+    width: 80%;
+    height: 30pt;
+    margin: 5pt 5pt 5pt -20pt;
+    text-align: center;
+    float: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8)
+}
+
+.list-song-info {
+    background: yellow;
 }
