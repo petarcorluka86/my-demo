@@ -57,7 +57,7 @@ class App extends Component {
         <div className="nav-escape">
           {this.state.show.loading && <Loading />}
           {this.state.show.icons && <IconsMode songs={this.state.songs} handleSort={this.handleSort} />}
-          {this.state.show.list && <ListMode songs={this.state.songs} />}
+          {this.state.show.list && <ListMode songs={this.state.songs} handleSort={this.handleSort} />}
           <Footer />
         </div>
       </div>

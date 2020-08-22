@@ -7,12 +7,12 @@
 
 .left-content-container{
     width: 60%;
-    background: white;
+    border: 1px solid white;
     margin: 5pt 0 0 0 ;
 }
 
 .right-content-container{
     width: 40%;
-    background: white;
+    border: 1px solid white;
     margin: 5pt 0 0 5pt ;
 }

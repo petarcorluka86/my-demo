@@ -16,7 +16,16 @@ function ListMode(props){
                 </ul>
             </div>
             <div className="right-content-container">
-                right
+                <div className="">
+                    <label className="select-form">
+                        Sort by duration:
+                        <select className="select" onChange={props.handleSort}>
+                            <option className="select" value="-">-</option>
+                            <option className="select" value="asc">ASC</option>
+                            <option className="select" value="desc">DESC</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </div>
     )
