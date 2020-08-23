@@ -46,10 +46,9 @@ class ListMode extends Component{
             )
         return (
             <div className ="content">
-                <div className="left-content-container" 
-                    onMouseOver={() => this.setState({showWelcome: false})}
-                    onMouseLeave={() => this.setState({showWelcome: true})}>
-                    <ul className="list-frame">
+                <div className="left-content-container">
+                    <ul onMouseOver={() => this.setState({showWelcome: false})}
+                        onMouseLeave={() => this.setState({showWelcome: true})}>
                         {songs}
                     </ul>
                 </div>
@@ -66,7 +65,7 @@ class ListMode extends Component{
                         </label>
                     </div>
                     <div className="list-song-info">
-                        {this.state.showWelcome && <div className="welcome-list">Welcome to <br/> TopPop!</div>}
+                        {this.state.showWelcome && <div className="welcome-list">Deezer's <br/> TOP 10</div>}
                         {this.state.showInfo && <div className="picture-frame"
                         style={{
                             background: "url("+this.state.song.cover+")",

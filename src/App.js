@@ -24,8 +24,8 @@ class App extends Component {
       songs: response, 
       show:{
         loading: false, 
-        icons: true,
-        list: false
+        icons: false,
+        list: true
       }
     }));
   }
