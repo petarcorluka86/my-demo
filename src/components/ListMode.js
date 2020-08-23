@@ -10,7 +10,9 @@ class ListMode extends Component{
             position: undefined,
             title: undefined,
             artist: undefined,
-            duration: undefined
+            duration: undefined,
+            preview: undefined,
+            cover: undefined
         }
     }
 
@@ -23,7 +25,8 @@ class ListMode extends Component{
                 album: song.album.title,
                 artist: song.artist.name,
                 duration: song.duration,
-                preview: song.preview
+                preview: song.preview,
+                cover: song.artist.picture_big
             }
         })
     }
@@ -43,23 +46,29 @@ class ListMode extends Component{
         return (
             <div className ="content">
                 <div className="left-content-container">
-                    <div className="title-list">These are the 10 most popular songs on Deezer:</div>
                     <ul>
                         {songs}
                     </ul>
                 </div>
                 <div className="right-content-container">
-                    <div><div className="sort-list">
+                    <div className="sort-list">
                         <label className="select-form">
-                            Sort by duration:
+                            Sort by:
                             <select className="select" onChange={this.props.handleSort}>
-                                <option className="select" value="-">-</option>
-                                <option className="select" value="asc">ASC</option>
-        <option className="select" value="desc">DESC</option>
+                                <option className="select" value="posASC">Position ASC</option>
+                                <option className="select" value="posDESC">Position DESC</option>
+                                <option className="select" value="durASC">Duration ASC</option>
+                                <option className="select" value="durDESC">Duration DESC</option>
                             </select>
                         </label>
-                    </div></div>
-                    <div className="list-song-info">.
+                    </div>
+                    <div className="list-song-info">
+                        {this.state.showInfo && <div className="picture-frame"
+                        style={{
+                            background: "url("+this.state.song.cover+")",
+                            backgroundSize: "cover"
+                        }}
+                        ></div>}
                         {this.state.showInfo && <SongInfo song={this.state.song} />}
                     </div>
                 </div>
