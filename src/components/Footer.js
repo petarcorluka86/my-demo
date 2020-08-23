@@ -4,10 +4,8 @@ import '../styles/Footer.css'
 function Footer(){
     return (
         <div className="footer">
-            <div id="contact">
-                Contact:
-                <span id="mail">petarcorluka86@gmail.com</span>
-            </div>
+            <div id="note">This application was created for job application purposes!</div>
+            <div id="contact">Contact: petarcorluka86@gmail.com</div>
         </div>
     )
 }

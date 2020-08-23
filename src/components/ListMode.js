@@ -5,6 +5,7 @@ import SongInfo  from './SongInfo'
 class ListMode extends Component{
 
     state = {
+        showWelcome: true,
         showInfo: false,
         song: {
             position: undefined,
@@ -45,8 +46,10 @@ class ListMode extends Component{
             )
         return (
             <div className ="content">
-                <div className="left-content-container">
-                    <ul>
+                <div className="left-content-container" 
+                    onMouseOver={() => this.setState({showWelcome: false})}
+                    onMouseLeave={() => this.setState({showWelcome: true})}>
+                    <ul className="list-frame">
                         {songs}
                     </ul>
                 </div>
@@ -63,6 +66,7 @@ class ListMode extends Component{
                         </label>
                     </div>
                     <div className="list-song-info">
+                        {this.state.showWelcome && <div className="welcome-list">Welcome to <br/> TopPop!</div>}
                         {this.state.showInfo && <div className="picture-frame"
                         style={{
                             background: "url("+this.state.song.cover+")",

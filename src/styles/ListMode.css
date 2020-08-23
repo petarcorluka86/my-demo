@@ -67,3 +67,13 @@ ul {
     width: 20vw;
     border: 1pt solid white;
 }
+
+.welcome-list {
+    color: white;
+    text-align: center;
+    font-size: 6em;
+    margin-top: 120pt;
+}
+
+.list-frame {
+}

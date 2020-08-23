@@ -1,23 +1,27 @@
 .footer {
-    background: rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     left: 0;
     height: 20pt;
-    width: 100%;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    color: white;
+    display: flex;
+    padding-bottom: 2pt;
+}
+
+#note {
+    line-height: 20pt;
+    margin-left: 33.33%;
+    width: 33.33%;
+    text-align: center;
+    position: relative;
 }
 
 #contact {
-    background: rbga(0,0,0,0);
-    margin-right: 30pt;
-    color: white;
-    float: right;
-    height: 20pt;
-    align-items: center;
-    display: flex;
-}
-
-#mail {
-    color: white;
-    margin: 5pt;
+    line-height: 20pt;
+    width: 33.33%;
+    padding-right: 40pt;
+    text-align: right;
 }
