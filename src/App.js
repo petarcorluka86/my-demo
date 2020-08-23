@@ -57,7 +57,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        <Navbar showIcons={this.showIcons} showList={this.showList} />
+        <Navbar showIcons={this.showIcons} showList={this.showList} handleSort={this.handleSort}/>
         <div className="nav-escape">
           {this.state.show.loading && <Loading />}
           {this.state.show.icons && <IconsMode songs={this.state.songs} handleSort={this.handleSort} />}

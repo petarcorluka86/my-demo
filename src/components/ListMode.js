@@ -40,7 +40,7 @@ class ListMode extends Component{
                     onMouseOver={()=> this.songHovered(song)}
                     onMouseLeave={()=> this.setState({showInfo: false})}
                     onClick={()=>window.open(this.state.song.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
-                    {song.position + ". " + song.title}
+                    {song.title}
                 </button>
             </li>
             )
@@ -53,17 +53,6 @@ class ListMode extends Component{
                     </ul>
                 </div>
                 <div className="right-content-container">
-                    <div className="sort-list">
-                        <label className="select-form">
-                            Sort by:
-                            <select className="select" onChange={this.props.handleSort}>
-                                <option className="select" value="posASC">Position ASC</option>
-                                <option className="select" value="posDESC">Position DESC</option>
-                                <option className="select" value="durASC">Duration ASC</option>
-                                <option className="select" value="durDESC">Duration DESC</option>
-                            </select>
-                        </label>
-                    </div>
                     <div className="list-song-info">
                         {this.state.showWelcome && <div className="welcome-list">Deezer's <br/> TOP 10</div>}
                         {this.state.showInfo && <div className="picture-frame"

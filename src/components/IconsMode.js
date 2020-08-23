@@ -45,23 +45,8 @@ class IconsMode extends Component {
             )
         return(
             <div>
-                <div className="title-and-sort">
-                    <div className="sort">
-                        <label className="select-form">
-                            Sort by:
-                            <select className="select" onChange={this.props.handleSort}>
-                                <option className="select" value="posASC">Position ASC</option>
-                                <option className="select" value="posDESC">Position DESC</option>
-                                <option className="select" value="durASC">Duration ASC</option>
-                                <option className="select" value="durDESC">Duration DESC</option>
-                            </select>
-                        </label>
-                    </div>
-                </div>
-                <div>
-                    <div className="icons-container">{songs}</div>
-                    {this.state.showInfo && <SongInfo song={this.state.song} />}
-                </div>
+                <div className="icons-container">{songs}</div>
+                {this.state.showInfo && <SongInfo song={this.state.song} />}
             </div>
         )
     }

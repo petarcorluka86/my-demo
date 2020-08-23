@@ -17,10 +17,9 @@
 }
 
 .nav-modes {
-    float: right;
-    display: flex;
+    line-height: 35pt;
+    width: fit-content;
     flex-direction: row;
-    height: 35pt;
     align-items: center;
 }
 
@@ -30,8 +29,31 @@
     margin: 0 5px;
     color: white;
     font-size: 100%;
+    font-family: arial, sans-serif;
 }
 
 .nav-escape {
     margin-top: 35pt;
+}
+
+.select-form{
+    width: fit-content;
+    float: right;
+    line-height: 35pt;
+    margin-left: 5pt;
+    margin-right: 10pt;
+    margin-bottom: -1pt;
+    height: 35pt;
+    color: white;
+    font-style: italic;
+    font-size: 100%;
+    font-family: arial, sans-serif;
+}
+
+.select{
+    color: black;
+    margin-left: 5pt;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
 }
