@@ -1,11 +1,10 @@
 #navbar {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     height: 35pt;
     width: 100%;
-    border-bottom: 0.5pt solid white;
 }
 
 #nav-title {

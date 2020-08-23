@@ -46,7 +46,6 @@ class IconsMode extends Component {
         return(
             <div>
                 <div className="title-and-sort">
-                    <div className="title">These are the 10 most popular songs on Deezer:</div>
                     <div className="sort">
                         <label className="select-form">
                             Sort by duration:

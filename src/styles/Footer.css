@@ -1,9 +1,9 @@
 .footer {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 30pt;
+    height: 20pt;
     width: 100%;
 }
 
@@ -12,7 +12,7 @@
     margin-right: 30pt;
     color: white;
     float: right;
-    height: 30pt;
+    height: 20pt;
     align-items: center;
     display: flex;
 }
