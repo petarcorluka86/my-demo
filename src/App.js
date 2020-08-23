@@ -31,14 +31,18 @@ class App extends Component {
   }
 
   handleSort = (event) => {
-    let newSongs
+    let newSongs;
     switch (event.target.value) {
-      case 'asc':
+      case 'durASC':
         newSongs = this.state.songs.sort((a,b)=>(parseInt(a.duration)>parseInt(b.duration))?1:((parseInt(b.duration)>parseInt(a.duration))?-1:0));
         break;
-      case 'desc':
-        let temp = this.state.songs.sort((a,b)=>(parseInt(a.duration)>parseInt(b.duration))?1:((parseInt(b.duration)>parseInt(a.duration))?-1:0));
-        newSongs = temp.reverse();
+      case 'durDESC':
+        newSongs = this.state.songs.sort((a,b)=>(parseInt(a.duration)>parseInt(b.duration))?1:((parseInt(b.duration)>parseInt(a.duration))?-1:0));
+        newSongs = newSongs.reverse();
+        break;
+      case 'posDESC':
+        newSongs = this.state.songs.sort((a,b)=>(parseInt(a.position)>parseInt(b.position))?1:((parseInt(b.position)>parseInt(a.position))?-1:0));
+        newSongs = newSongs.reverse();
         break;
       default:
         newSongs = this.state.songs.sort((a,b)=>(parseInt(a.position)>parseInt(b.position))?1:((parseInt(b.position)>parseInt(a.position))?-1:0));

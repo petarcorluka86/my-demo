@@ -1,20 +1,19 @@
 .my-modal{
-    background-color: rgba(255, 255, 255, 0.563);
+    background: rgba(255, 255, 255, 0.0);
+    color: white;
     float: right;
-    margin: 20pt 30pt 10pt 0;
+    margin: 20pt 40pt 10pt 0;
     width: 40%;
     padding: 15pt;
-    border: 1pt solid black;
-    border-radius: 25px;
+    border: 1pt solid white;
+    border-radius: 7px;
 }
 
 .modal-title{
-    font-weight: 500;
     font-size: 1.5em;
     float: right;
 }
 
 .modal-text{
     font-size: 1.5em;
-    color: black;
 }

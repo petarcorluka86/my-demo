@@ -48,11 +48,12 @@ class IconsMode extends Component {
                 <div className="title-and-sort">
                     <div className="sort">
                         <label className="select-form">
-                            Sort by duration:
+                            Sort by:
                             <select className="select" onChange={this.props.handleSort}>
-                                <option className="select" value="-">-</option>
-                                <option className="select" value="asc">ASC</option>
-                                <option className="select" value="desc">DESC</option>
+                                <option className="select" value="posASC">Position ASC</option>
+                                <option className="select" value="posDESC">Position DESC</option>
+                                <option className="select" value="durASC">Duration ASC</option>
+                                <option className="select" value="durDESC">Duration DESC</option>
                             </select>
                         </label>
                     </div>
