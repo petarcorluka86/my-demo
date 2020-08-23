@@ -6,8 +6,14 @@ function Navbar(props) {
         <div id="navbar">
             <span id="nav-title">TOP POP</span>
             <span className="nav-modes">
-                <button className="nav-button" onClick={props.showIcons}>Icons mode</button>
-                <button className="nav-button" onClick={props.showList}>List mode</button>
+                <button className="nav-button" onClick={()=>{
+                    if (props.show.icons === true) {
+                        props.showList()
+                    }
+                    else {
+                        props.showIcons()
+                    }
+                }}>Change view</button>
             </span>
             <span className="select-form">Sort by:
                 <select className="select" onChange={props.handleSort}>
