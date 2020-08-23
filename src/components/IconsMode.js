@@ -46,6 +46,7 @@ class IconsMode extends Component {
         return(
             <div>
                 <div className="icons-container">{songs}</div>
+                <div className="welcome-icons">Deezer's <br/> TOP 10</div>
                 {this.state.showInfo && <SongInfo song={this.state.song} />}
             </div>
         )
