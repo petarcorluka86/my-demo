@@ -34,9 +34,8 @@ class ListMode extends Component{
 
     render(){
         const songs = this.props.songs.map(song =>
-            <li><button 
+            <li key={song.id}><button 
                     className="song-list-item" 
-                    key={song.id} 
                     onMouseOver={()=> this.songHovered(song)}
                     onMouseLeave={()=> this.setState({showInfo: false})}
                     onClick={()=>window.open(this.state.song.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
