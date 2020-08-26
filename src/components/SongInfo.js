@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/SongInfo.css'
 
-function SongInfo(props) {
+export default function SongInfo(props) {
     return (
         <div className="my-modal">
             <div className="modal-title">SONG DETAILS</div>
@@ -15,4 +15,3 @@ function SongInfo(props) {
         </div>
     )
 }
-export default SongInfo
