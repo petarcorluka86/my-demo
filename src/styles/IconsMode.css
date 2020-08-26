@@ -29,7 +29,7 @@
 }
 
 .song-icon {
-    line-height: 100pt;
+    line-height: 10vw;
     width: 15%;
     margin: 8pt 1%;
     flex-grow: 1;
@@ -40,7 +40,7 @@
 }
 
 .song-icon:hover {
-    line-height: 108pt;
+    line-height: 11vw;
     width: 16%;
     margin: 0 0.5%;
     flex-grow: 1;
