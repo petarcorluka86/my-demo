@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {context} from '../Context'
+import {context} from '../routes/Context'
 import Navbar from './Navbar'
 import Loading from './Loading'
 import IconsMode from './IconsMode'

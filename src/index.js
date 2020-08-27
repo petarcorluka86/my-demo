@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ContextProvider from './Context';
-import App from './components/App'
-import './index.css'
-import store from './store';
+import Routes from './routes';
+import './index.css';
+import {store} from './routes';
 
 const render = () => ReactDOM.render(
-  <ContextProvider>
-    <App/>
-  </ContextProvider>,
+  <Routes />,
   document.getElementById('root')
 );
 

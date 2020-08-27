@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import songData from '../assets/testData/songData';
-import store from '../store';
+import {store}  from '../routes';
 import * as types from './actionTypes';
 
 export const getSongs = async() => {
@@ -21,7 +21,7 @@ export const sortSongs = (order) => store.dispatch({
 });
 
 /*This function should be used ONLY for testing other functionalities in this in this application, it should be
-  commented otherwise. It has same effect like PROPER FUNCTION ABOVE, but this one's data is hard coded for testing purposes.
+  commented otherwise. It has same effect like PROPER FUNCTION ABOVE with the same name, but this one's data is hard coded for testing purposes.
 export const getSongs = async() => {
     return songData.tracks.data
 };

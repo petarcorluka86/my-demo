@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {context} from '../Context'
+import {context} from '../routes/Context'
 import * as types from '../actions/actionTypes'
 import './Navbar.css'
 

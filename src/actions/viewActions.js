@@ -1,4 +1,4 @@
-import store from '../store'
+import {store} from '../routes';
 import * as types from './actionTypes'
 
 export const showList = () => store.dispatch({type: types.SHOW_LIST});

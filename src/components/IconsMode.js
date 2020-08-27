@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import {context} from '../Context'
+import {context} from '../routes/Context'
 import './IconsMode.css'
 import SongInfo from './SongInfo'
 
