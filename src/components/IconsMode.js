@@ -1,32 +1,10 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import './IconsMode.css';
 import SongInfo from './SongInfo';
 
-export default function IconsMode () {
-    
-    const songs = useSelector(state => state.songs);
-    const [showInfo, setInfo] = useState(0);
-    const [thesong, setSong] = useState({
-        position: undefined,
-        title: undefined,
-        artist: undefined,
-        duration: undefined
-    });
+export default function IconsMode(props) {
 
-    const iconHovered = song => {
-        setInfo(true);
-        setSong({
-            position: song.position,
-            title: song.title,
-            album: song.album.title,
-            artist: song.artist.name,
-            duration: song.duration,
-            preview: song.preview
-        });
-    }
-
-    const songsList = songs.map(song =>
+    const songsList = props.songs.map(song =>
         <button 
             className="song-icon" 
             key={song.id} 
@@ -35,9 +13,9 @@ export default function IconsMode () {
                 backgroundSize: "cover",
                 fontSize: "1em",
             }}
-            onMouseOver={()=>iconHovered(song)}
-            onMouseLeave={()=>setInfo(false)}
-            onClick={()=>window.open(thesong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}> 
+            onMouseOver={()=> props.songHovered(song)}
+            onMouseLeave={()=> props.setInfo(false)}
+            onClick={()=>window.open(props.theSong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}> 
             <span className="song-title">{song.title}</span> 
         </button>
         );
@@ -46,7 +24,7 @@ export default function IconsMode () {
         <div>
             <div className="icons-container">{songsList}</div>
             <div className="welcome-icons">Deezer's <br/> TOP 10</div>
-            {showInfo && <SongInfo song={thesong} />}
+            {props.showInfo && <SongInfo song={props.theSong} />}
         </div>
     );
 

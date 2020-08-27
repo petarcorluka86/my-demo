@@ -1,40 +1,15 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import './ListMode.css';
 import SongInfo  from './SongInfo';
 
-export default function ListMode() {
-    const songs = useSelector(state => state.songs);
+export default function ListMode(props) {
     const [msg, setMsg] = useState(true);
-    const [showInfo, setInfo] = useState(false);
-    const [thesong, setSong] = useState({
-        position: undefined,
-        title: undefined,
-        artist: undefined,
-        duration: undefined,
-        preview: undefined,
-        cover: undefined
-    });
-
-    const songHovered = (song) => {
-        setInfo(true);
-        setSong({
-            position: song.position,
-            title: song.title,
-            album: song.album.title,
-            artist: song.artist.name,
-            duration: song.duration,
-            preview: song.preview,
-            cover: song.artist.picture_big
-        });
-    }
-
-    const songsList = songs.map(song =>
+    const songsList = props.songs.map(song =>
             <li key={song.id}><button 
                     className="song-list-item" 
-                    onMouseOver={()=> songHovered(song)}
-                    onMouseLeave={()=> setInfo(false)}
-                    onClick={()=>window.open(thesong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
+                    onMouseOver={()=> props.songHovered(song)}
+                    onMouseLeave={()=> props.setInfo(false)}
+                    onClick={()=>window.open(props.theSong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
                     {song.title}
                 </button>
             </li>
@@ -51,12 +26,12 @@ export default function ListMode() {
             <div className="right-content-container">
                 <div className="list-song-info">
                     {msg && <div className="welcome-list">Deezer's <br/> TOP 10</div>}
-                    {showInfo && <div className="picture-frame"
+                    {props.showInfo && <div className="picture-frame"
                     style={{
-                        background: "url("+thesong.cover+")",
+                        background: "url("+props.theSong.cover+")",
                         backgroundSize: "cover"
                     }}></div>}
-                    {showInfo && <SongInfo song={thesong} />}
+                    {props.showInfo && <SongInfo song={props.theSong} />}
                 </div>
             </div>
         </div>
