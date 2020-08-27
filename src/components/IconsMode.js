@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import {context} from '../Context'
-import '../styles/IconsMode.css'
+import './IconsMode.css'
 import SongInfo from './SongInfo'
 
 //sve skoro isto kao u ListMode samo drugačije prikazano i raspoređeno

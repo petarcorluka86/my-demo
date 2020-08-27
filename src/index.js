@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ContextProvider from './Context';
 import App from './components/App'
-import './styles/index.css'
+import './index.css'
+import store from './store';
 
-ReactDOM.render(
+const render = () => ReactDOM.render(
   <ContextProvider>
     <App/>
   </ContextProvider>,
   document.getElementById('root')
 );
+
+store.subscribe(render);
+render();

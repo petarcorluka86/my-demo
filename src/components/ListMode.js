@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import {context} from '../Context'
-import '../styles/ListMode.css'
+import './ListMode.css'
 import SongInfo  from './SongInfo'
 
 export default function ListMode() {
