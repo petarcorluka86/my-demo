@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
-import {context} from '../routes/Context'
-import Navbar from './Navbar'
-import Loading from './Loading'
-import IconsMode from './IconsMode'
-import ListMode from './ListMode'
-import Footer from './Footer'
+import React, {useContext} from 'react';
+import {context} from '../routes/Context';
+import Navbar from './Navbar';
+import Loading from './Loading';
+import IconsMode from './IconsMode';
+import ListMode from './ListMode';
+import Footer from './Footer';
 
 export default function App() {
     const {show} = useContext(context);

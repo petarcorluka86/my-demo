@@ -1,10 +1,10 @@
-import React, {useState, useContext} from 'react'
-import {context} from '../routes/Context'
-import './IconsMode.css'
-import SongInfo from './SongInfo'
+import React, {useState, useContext} from 'react';
+import {context} from '../routes/Context';
+import './IconsMode.css';
+import SongInfo from './SongInfo';
 
-//sve skoro isto kao u ListMode samo drugačije prikazano i raspoređeno
 export default function IconsMode () {
+    
     const {songs} = useContext(context);
     const [showInfo, setInfo] = useState(0);
     const [thesong, setSong] = useState({
@@ -13,6 +13,7 @@ export default function IconsMode () {
         artist: undefined,
         duration: undefined
     });
+
     const songsList = songs.map(song =>
         <button 
             className="song-icon" 
@@ -38,12 +39,14 @@ export default function IconsMode () {
             onClick={()=>window.open(thesong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}> 
             <span className="song-title">{song.title}</span> 
         </button>
-        )
+        );
+
     return(
         <div>
             <div className="icons-container">{songsList}</div>
             <div className="welcome-icons">Deezer's <br/> TOP 10</div>
             {showInfo && <SongInfo song={thesong} />}
         </div>
-    ) 
+    );
+
 }

@@ -1,4 +1,4 @@
-export const INIT_SONGS = 'INIT_SONGS'
+export const INIT_SONGS = 'INIT_SONGS';
 
 export const SORT_BY_POSITION_ASC = 'SORT_BY_POSITION_ASC';
 export const SORT_BY_POSITION_DESC = 'SORT_BY_POSITION_DESC';

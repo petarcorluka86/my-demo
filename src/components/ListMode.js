@@ -1,15 +1,12 @@
-import React, {useState, useContext} from 'react'
-import {context} from '../routes/Context'
-import './ListMode.css'
-import SongInfo  from './SongInfo'
+import React, {useState, useContext} from 'react';
+import {context} from '../routes/Context';
+import './ListMode.css';
+import SongInfo  from './SongInfo';
 
 export default function ListMode() {
     const {songs} = useContext(context);
-    //state koji odlucuje hoce li se pokazati 'Deezer's TOP 10' poruka (želim da se ne vidi poruka iza podataka o pjesmi pa zato)
     const [msg, setMsg] = useState(true);
-    //state koji odlucuje hoce li se pokazat info o odabranoj pjsemi
     const [showInfo, setInfo] = useState(false);
-    //state s podatcima o pjesim iznad koje je trenutno miš
     const [thesong, setSong] = useState({
         position: undefined,
         title: undefined,
@@ -63,5 +60,5 @@ export default function ListMode() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import './SongInfo.css'
+import React from 'react';
+import './SongInfo.css';
 
 export default function SongInfo(props) {
     return (
@@ -13,5 +13,5 @@ export default function SongInfo(props) {
                 <div>Duration: {("0"+Math.floor(props.song.duration / 60)).slice(-2)} :{("0" + props.song.duration % 60).slice(-2)}</div>
             </div>
         </div>
-    )
+    );
 }

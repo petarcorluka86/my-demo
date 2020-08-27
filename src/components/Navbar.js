@@ -1,7 +1,7 @@
-import React, {useContext} from 'react'
-import {context} from '../routes/Context'
-import * as types from '../actions/actionTypes'
-import './Navbar.css'
+import React, {useContext} from 'react';
+import {context} from '../routes/Context';
+import * as types from '../actions/actionTypes';
+import './Navbar.css';
 
 export default function Navbar() {
     const {show, actions} = useContext(context);
