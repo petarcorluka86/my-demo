@@ -1,7 +1,20 @@
 import {store} from '../routes';
 import * as types from './actionTypes'
 
-export const showList = () => store.dispatch({type: types.SHOW_LIST});
-export const showIcons = () => store.dispatch({type: types.SHOW_ICONS});
+export const showList = () => {
+    try {
+        store.dispatch({type: types.SHOW_LIST});
+    }
+    catch (error) {
+        console.log("Error in showList while trying to dispatch new show object", error);
+    }
+}
 
-export const changeView = (viewMode) => viewMode === types.SHOW_LIST ? showList() : showIcons();
+export const showIcons = () => {
+    try {
+        store.dispatch({type: types.SHOW_ICONS});
+    }
+    catch (error) {
+        console.log("Error in showList while trying to dispatch new show object", error);
+    }
+}

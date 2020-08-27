@@ -1,10 +1,10 @@
-import React, {useState, useContext} from 'react';
-import {context} from '../routes/Context';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import './ListMode.css';
 import SongInfo  from './SongInfo';
 
 export default function ListMode() {
-    const {songs} = useContext(context);
+    const songs = useSelector(state => state.songs);
     const [msg, setMsg] = useState(true);
     const [showInfo, setInfo] = useState(false);
     const [thesong, setSong] = useState({

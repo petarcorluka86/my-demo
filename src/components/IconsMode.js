@@ -1,11 +1,11 @@
-import React, {useState, useContext} from 'react';
-import {context} from '../routes/Context';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import './IconsMode.css';
 import SongInfo from './SongInfo';
 
 export default function IconsMode () {
     
-    const {songs} = useContext(context);
+    const songs = useSelector(state => state.songs);
     const [showInfo, setInfo] = useState(0);
     const [thesong, setSong] = useState({
         position: undefined,
@@ -13,6 +13,18 @@ export default function IconsMode () {
         artist: undefined,
         duration: undefined
     });
+
+    const iconHovered = song => {
+        setInfo(true);
+        setSong({
+            position: song.position,
+            title: song.title,
+            album: song.album.title,
+            artist: song.artist.name,
+            duration: song.duration,
+            preview: song.preview
+        });
+    }
 
     const songsList = songs.map(song =>
         <button 
@@ -22,19 +34,8 @@ export default function IconsMode () {
                 background: "url("+song.artist.picture_big+")", 
                 backgroundSize: "cover",
                 fontSize: "1em",
-            }
-            }
-            onMouseOver={()=>{
-                setInfo(true);
-                setSong({
-                    position: song.position,
-                    title: song.title,
-                    album: song.album.title,
-                    artist: song.artist.name,
-                    duration: song.duration,
-                    preview: song.preview
-                });
             }}
+            onMouseOver={()=>iconHovered(song)}
             onMouseLeave={()=>setInfo(false)}
             onClick={()=>window.open(thesong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}> 
             <span className="song-title">{song.title}</span> 
