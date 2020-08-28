@@ -79,11 +79,6 @@ $nav-escape: 30pt;
 }
 
 @media (max-width: 900px) {
-    .rightContentContainer{
-        width: 0px;
-        display: none;
-    }
-
     .leftContentContainer{
         width: 100vw;
         ul {

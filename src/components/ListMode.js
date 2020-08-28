@@ -25,17 +25,19 @@ export default function ListMode(props) {
                     {songsList}
                 </ul>
             </div>
+            <Media query="(min-width: 900px)">
             <div className={styles.rightContentContainer}>
                 <div className={styles.listSongInfo}>
                     {msg && <div className={styles.welcomeList}>Deezer's <br/> TOP 10</div>}
-                    {props.showInfo && <div className={styles.pictureFrame}
-                    style={{
-                        background: "url("+props.theSong.cover+")",
-                        backgroundSize: "cover"
-                    }}></div>}
-                    {props.showInfo && <SongInfo song={props.theSong} />}
+                        {props.showInfo && <div className={styles.pictureFrame}
+                        style={{
+                            background: "url("+props.theSong.cover+")",
+                            backgroundSize: "cover"
+                        }}></div>}
+                        {props.showInfo && <SongInfo song={props.theSong} />}
                 </div>
             </div>
+            </Media>
         </div>
     );
 }
