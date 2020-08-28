@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './ListMode.css';
+import styles from './ListMode.module.css';
 import SongInfo  from './SongInfo';
 
 export default function ListMode(props) {
     const [msg, setMsg] = useState(true);
     const songsList = props.songs.map(song =>
             <li key={song.id}><button 
-                    className="song-list-item" 
+                    className={styles.songListItem} 
                     onMouseOver={()=> props.songHovered(song)}
                     onMouseLeave={()=> props.setInfo(false)}
                     onClick={()=>window.open(props.theSong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
@@ -16,17 +16,17 @@ export default function ListMode(props) {
         );
 
     return(
-        <div className ="content">
-            <div className="left-content-container">
+        <div className ={styles.content}>
+            <div className={styles.leftContentContainer}>
                 <ul onMouseOver={() => setMsg(false)}
                     onMouseLeave={() => setMsg(true)}>
                     {songsList}
                 </ul>
             </div>
-            <div className="right-content-container">
-                <div className="list-song-info">
-                    {msg && <div className="welcome-list">Deezer's <br/> TOP 10</div>}
-                    {props.showInfo && <div className="picture-frame"
+            <div className={styles.rightContentContainer}>
+                <div className={styles.listSongInfo}>
+                    {msg && <div className={styles.welcomeList}>Deezer's <br/> TOP 10</div>}
+                    {props.showInfo && <div className={styles.pictureFrame}
                     style={{
                         background: "url("+props.theSong.cover+")",
                         backgroundSize: "cover"

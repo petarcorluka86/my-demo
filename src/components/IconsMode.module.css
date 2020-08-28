@@ -1,4 +1,4 @@
-.title-and-sort{
+.titleAndSort{
     margin: 55pt 45pt 5pt 40pt;
     color: white;
     height: 2.2em;
@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-.icons-container {
+.iconsContainer {
     display: flex;
     flex-wrap: wrap;
     background: rgba(0,120,120,0.0);
@@ -28,7 +28,7 @@
     margin: 50pt 30pt 10pt 30pt;
 }
 
-.song-icon {
+.songIcon {
     line-height: 10vw;
     width: 15%;
     margin: 8pt 1%;
@@ -39,7 +39,7 @@
     border: 1px solid white;
 }
 
-.song-icon:hover {
+.songIcon:hover {
     line-height: 11vw;
     width: 16%;
     margin: 0 0.5%;
@@ -49,14 +49,14 @@
     white-space: nowrap;
 }
 
-.song-title {
+.songTitle {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     color: white;
     padding: 3pt;
 }
 
-.welcome-icons {
+.welcomeIcons {
     float: left;
     color: white;
     text-align: center;

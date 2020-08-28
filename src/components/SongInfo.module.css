@@ -1,4 +1,4 @@
-.my-modal{
+.myModal{
     background: rgba(255, 255, 255, 0.0);
     color: white;
     float: right;
@@ -9,11 +9,11 @@
     border-radius: 7px;
 }
 
-.modal-title{
+.modalTitle{
     font-size: 1.5em;
     float: right;
 }
 
-.modal-text{
+.modalText{
     font-size: 1.5em;
 }

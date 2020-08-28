@@ -1,11 +1,11 @@
 import React from 'react';
-import './Footer.css';
+import styles from './Footer.module.css';
 
 export default function Footer(){
     return (
-        <div className="footer">
-            <div id="note">This application was created for job application purposes!</div>
-            <div id="contact">Contact: petarcorluka86@gmail.com</div>
+        <div className={styles.footer}>
+            <div id={styles.note}>This application was created for job application purposes!</div>
+            <div id={styles.contact}>Contact: petarcorluka86@gmail.com</div>
         </div>
     );
 }

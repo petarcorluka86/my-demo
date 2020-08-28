@@ -1,11 +1,11 @@
 import React from 'react';
-import './SongInfo.css';
+import styles from './SongInfo.module.css';
 
 export default function SongInfo(props) {
     return (
-        <div className="my-modal">
-            <div className="modal-title">SONG DETAILS</div>
-            <div className = "modal-text container">
+        <div className={styles.myModal}>
+            <div className={styles.modalTitle}>SONG DETAILS</div>
+            <div className = {styles.modalText}>
                 <div>Position: {props.song.position} </div>
                 <div>Title: {props.song.title}</div>
                 <div>Album: {props.song.album}</div>

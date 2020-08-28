@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Navbar from '../components/Navbar';
 import Loading from '../components/Loading';
 import IconsMode from '../components/IconsMode';
 import ListMode from '../components/ListMode';
 import Footer from '../components/Footer';
+import * as types from '../actions/actionTypes';
 import * as actions from '../actions';
 import './App.css';
 
 export default function App() {
+    const dispatch = useDispatch();
     const songs = useSelector(state => state.songs);
     const show = useSelector(state => state.show);
     const [showInfo, setInfo] = useState(false);
@@ -20,9 +22,14 @@ export default function App() {
       preview: undefined,
       cover: undefined
     });
-
-    useEffect(() => { actions.songs.getSongs().then(response => actions.songs.initSongs(response)) },[]);
-    useEffect(() => {if(songs.length > 0 && show.loading) actions.view.showList()},[songs, show.loading]);
+    const localActions = {
+      initSongs: () => dispatch(actions.songs.initSongs()),
+      showList: () => dispatch(actions.view.changeView(types.SHOW_LIST))
+    }
+    
+    // eslint-disable-next-line
+    useEffect(() => {localActions.initSongs()},[]);
+    useEffect(() => {if(songs.length > 0 && show.loading) localActions.showList()},[localActions,songs, show.loading]);
 
     const songHovered = (song) => {
       setInfo(true);

@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-#nav-title {
+#navTitle {
     float: left;
     height: 35pt;
     font-size: 28pt;
@@ -16,14 +16,14 @@
     color: white;
 }
 
-.nav-modes {
+.navModes {
     line-height: 35pt;
     width: fit-content;
     flex-direction: row;
     align-items: center;
 }
 
-.nav-button {
+.navbutton {
     background-color: rgba(0, 0, 0, 0.0);
     border: none;
     margin: 0 5px;
@@ -32,11 +32,11 @@
     font-family: arial, sans-serif;
 }
 
-.nav-escape {
+.navEscape {
     margin-top: 35pt;
 }
 
-.select-form{
+.selectForm{
     width: fit-content;
     float: right;
     line-height: 35pt;
