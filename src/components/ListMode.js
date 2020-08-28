@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Media from 'react-media';
 import styles from '../css/ListMode.module.css';
 import SongInfo  from './SongInfo';
 
@@ -12,6 +13,7 @@ export default function ListMode(props) {
                     onClick={()=>window.open(props.theSong.preview,'popUpWindow','height=200,width=400,top=10,left=550')}>
                     {song.title}
                 </button>
+                <Media query="(max-width: 900px)">{song.title === props.theSong.title && props.showInfo && <SongInfo song={props.theSong} />}</Media>
             </li>
         );
 

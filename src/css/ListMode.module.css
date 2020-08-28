@@ -23,6 +23,10 @@
   padding: 0;
 }
 
+.leftContentContainer ul li {
+  width: 100%;
+}
+
 .rightContentContainer {
   width: 50%;
   margin: 5pt 0 0 5pt;
@@ -77,5 +81,19 @@
   text-align: center;
   font-size: 6em;
   margin-top: 120pt;
+}
+
+@media (max-width: 900px) {
+  .rightContentContainer {
+    width: 0px;
+    display: none;
+  }
+  .leftContentContainer {
+    width: 100vw;
+  }
+  .leftContentContainer ul {
+    width: 80%;
+    list-style-type: none;
+  }
 }
 /*# sourceMappingURL=ListMode.module.css.map */

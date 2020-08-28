@@ -7,7 +7,7 @@ import ListMode from '../components/ListMode';
 import Footer from '../components/Footer';
 import * as types from '../actions/actionTypes';
 import * as actions from '../actions';
-import './App.css';
+import '../css/App.css';
 
 export default function App() {
     const dispatch = useDispatch();

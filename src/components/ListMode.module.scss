@@ -19,6 +19,10 @@ $nav-escape: 30pt;
         align-content: center;
         text-align: center;
         padding: 0;
+
+        li {
+            width: 100%;
+        }
     }
 }
 
@@ -73,4 +77,19 @@ $nav-escape: 30pt;
     text-align: center;
     font-size: 6em;
     margin-top: 120pt;
+}
+
+@media (max-width: 900px) {
+    .rightContentContainer{
+        width: 0px;
+        display: none;
+    }
+
+    .leftContentContainer{
+        width: 100vw;
+        ul {
+            width: 80%;
+            list-style-type: none;
+        }
+    }
 }
