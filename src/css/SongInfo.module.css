@@ -1,0 +1,20 @@
+.myModal {
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  float: right;
+  margin: 20pt 40pt 10pt 0;
+  width: 40vw;
+  padding: 15pt;
+  border: 1pt solid white;
+  border-radius: 7px;
+}
+
+.modalTitle {
+  font-size: 1.5em;
+  float: right;
+}
+
+.modalText {
+  font-size: 1.5em;
+}
+/*# sourceMappingURL=SongInfo.module.css.map */

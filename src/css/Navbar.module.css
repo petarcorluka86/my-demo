@@ -1,0 +1,69 @@
+#navbar {
+  background: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 35pt;
+  width: 100%;
+}
+
+#navTitle {
+  float: left;
+  height: 35pt;
+  font-size: 28pt;
+  font-weight: 500;
+  margin: 0 20pt;
+  color: white;
+}
+
+.navModes {
+  line-height: 35pt;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbutton {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin: 0 5px;
+  color: white;
+  font-size: 100%;
+  font-family: arial, sans-serif;
+}
+
+.navEscape {
+  margin-top: 35pt;
+}
+
+.selectForm {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: right;
+  line-height: 35pt;
+  margin-left: 5pt;
+  margin-right: 10pt;
+  margin-bottom: -1pt;
+  height: 35pt;
+  color: white;
+  font-style: italic;
+  font-size: 100%;
+  font-family: arial, sans-serif;
+}
+
+.select {
+  color: black;
+  margin-left: 5pt;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+/*# sourceMappingURL=Navbar.module.css.map */

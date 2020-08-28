@@ -1,0 +1,30 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20pt;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2pt;
+}
+
+#note {
+  line-height: 20pt;
+  margin-left: 33.33%;
+  width: 33.33%;
+  text-align: center;
+  position: relative;
+}
+
+#contact {
+  line-height: 20pt;
+  width: 33.33%;
+  padding-right: 40pt;
+  text-align: right;
+}
+/*# sourceMappingURL=Footer.module.css.map */

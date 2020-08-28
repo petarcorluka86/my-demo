@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './ListMode.module.css';
+import styles from '../css/ListMode.module.css';
 import SongInfo  from './SongInfo';
 
 export default function ListMode(props) {

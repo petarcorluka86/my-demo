@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SongInfo.module.css';
+import styles from '../css/SongInfo.module.css';
 
 export default function SongInfo(props) {
     return (

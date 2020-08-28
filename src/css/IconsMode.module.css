@@ -1,0 +1,85 @@
+.titleAndSort {
+  margin: 55pt 45pt 5pt 40pt;
+  color: white;
+  height: 2.2em;
+}
+
+.title {
+  float: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 2.2em;
+}
+
+.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  height: 2.2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: rgba(0, 120, 120, 0);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin: 50pt 30pt 10pt 30pt;
+}
+
+.songIcon {
+  line-height: 10vw;
+  width: 15%;
+  margin: 8pt 1%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid white;
+}
+
+.songIcon:hover {
+  line-height: 11vw;
+  width: 16%;
+  margin: 0 0.5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.songTitle {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  color: white;
+  padding: 3pt;
+}
+
+.welcomeIcons {
+  float: left;
+  color: white;
+  text-align: center;
+  font-size: 6em;
+  margin-left: 13%;
+}
+/*# sourceMappingURL=IconsMode.module.css.map */

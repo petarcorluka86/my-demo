@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './IconsMode.module.css';
+import styles from '../css/IconsMode.module.css';
 import SongInfo from './SongInfo';
 
 export default function IconsMode(props) {
