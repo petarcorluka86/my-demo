@@ -1,13 +1,25 @@
+$nav-escape: 30pt;
+
 .content{
-    margin-top: 30pt;
+    display: flex;
     height: 100vw;
     width: 100%;
-    display: flex;
+    margin-top: $nav-escape;
 }
 
 .leftContentContainer{
     width: 50%;
     margin: 5pt 0 0 0 ;
+
+    ul {
+        margin-right: 10%;
+        float: right;
+        width: 80%;
+        list-style-type: none;
+        align-content: center;
+        text-align: center;
+        padding: 0;
+    }
 }
 
 .rightContentContainer{
@@ -16,22 +28,12 @@
 }
 
 .sortList {
-    width: 100%;
     display: flex;
-    float: left;
     height: 2.2em;
-    align-items: center;
+    width: 100%;
     margin-top: 10pt;
-}
-
-ul {
-    margin-right: 10%;
-    float: right;
-    width: 80%;
-    list-style-type: none;
-    align-content: center;
-    text-align: center;
-    padding: 0;
+    float: left;
+    align-items: center;
 }
 
 .songListItem {
@@ -48,20 +50,12 @@ ul {
 }
 
 .songlistItem:hover {
-    width: 100%;
-    height: 30pt;
-    margin: 5pt 0pt 5pt 0pt;
-    text-align: center;
-    float: center;
-    border: 1px solid white;
-    border-radius: 20px;
-    font-size: 1.1em;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.8)
+    @extend .songListItem;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .listSongInfo {
-    margin-top: 40pt;
+    margin-top: $nav-escape + 10;
     width: 100%;
 }
 

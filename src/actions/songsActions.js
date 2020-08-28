@@ -5,12 +5,10 @@ import * as types from './actionTypes';
 export function initSongs() {
     return async dispatch => {
         try {
-            console.log("Songs are  being fetched.")
             const proxyurl = "https://cors-anywhere.herokuapp.com/";
             const url = "https://api.deezer.com/chart";
             const songs = await fetch(proxyurl + url);
             const json = await songs.json();
-            console.log("Songs are fetched.")
             dispatch({type: types.INIT_SONGS, payload: json.tracks.data});
         }
         catch (error) {

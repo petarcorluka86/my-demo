@@ -1,16 +1,3 @@
-.titleAndSort{
-    margin: 55pt 45pt 5pt 40pt;
-    color: white;
-    height: 2.2em;
-}
-
-.title {
-    float: left;
-    align-items: center;
-    display: flex;
-    color: white;
-    font-size: 2.2em; 
-}
 
 .sort{
     display: flex;
@@ -40,13 +27,11 @@
 }
 
 .songIcon:hover {
+    @extend .songIcon;
     line-height: 11vw;
     width: 16%;
     margin: 0 0.5%;
     flex-grow: 1;
-    flex-shrink: 1;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 .songTitle {
